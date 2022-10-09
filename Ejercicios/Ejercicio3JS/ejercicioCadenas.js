@@ -1,0 +1,11 @@
+let nombre = "Sergio";
+let Apellidos = "RM Inventado";
+let estudiante = nombre.concat(" ", Apellidos);
+console.log(estudiante);
+console.log(estudiante.toUpperCase());
+console.log(estudiante.toLowerCase());
+console.log(estudiante.length);
+console.log(estudiante.charAt(0));
+console.log(estudiante.charAt(estudiante.length-1));
+console.log(estudiante.replace(/ /g, ""));
+console.log(estudiante.includes(nombre));

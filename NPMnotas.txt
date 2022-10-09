@@ -1,0 +1,87 @@
+¿Qué es npm?
+npm es parte esencial de Node.js, el entorno de ejecución de javaScript en el lado del servidor
+basado en el motor V8 de Google. Es muy seguramente la principal razón del gran éxito de Node
+permitiendo que cientos de desarrolladores puedan compartir paquetes de software entre distintos proyectos.
+
+npm responde a las siglas de Node Package Manager o manejador de paquetes de node,
+es la herramienta por defecto de JavaScript para la tarea de compartir e instalar paquetes.
+
+Para instalar NPM, debemos ir a la documentacion de Nodejs y descargar el paquete de Node, que ya incluye 
+NPM.
+
+Para el uso de módulos al crear un proyecto, en el package.json debemos añadir "type": "module". Esto
+nos permite usar y crear librerias para despues llamarlas con import y export. Con ES6 al poner "type": "module",
+en la carpeta donde tenemos código con funciones, delante de cada funcíon o variable ponemos export y ya son 
+públicos para otros archivos.
+
+
+Listado de Comandos básicos para usuarios de NPM.
+
+    Comprobar version de Node
+
+    --> node -v
+
+    Comprobar  version de npm
+
+    -->npm -v
+
+    Inicializar el proyecto crea el archivo package.json
+
+    --> npm init
+    --> npm init -y (crea un proyecto directamente sin preguntar los datos de json)
+
+    Buscar paquetes
+
+    --> npm search [nombreDelPaquete]
+
+    Instalar un paquete
+
+    --> npm install [nombreDelPaquete]
+
+    Instalar una version especifica de un paquete usando “version” irá la versión especificada,
+    de lo contrario, si no se especifica, se instalará la última disponible.
+
+    --> npm install nombreDelPaquete@version
+
+    Instalar el paquete y modifica el archivo package.json agregando la librería en las dependencias
+
+    --> npm install [nombreDelPaquete] --save
+
+    Instalar el paquete y modifica el archivo package.json agregando la librería en las dependencias
+    solo necesarias para desarrollo
+
+    --> npm install [nombreDelPaquete] --save-dev
+
+    Si no se especifica un paquete, se entiende que se desea verificar/instalar todas las 
+    dependencias dentro del archivo package.json. Esto es habitual, cuando se descargan 
+    proyectos o aplicaciones de github, ya que las dependencias deben ser instaladas luego
+    de descargar el proyecto (por razones de tamaño).
+
+    --> npm install
+
+    Con la opción -g o –global se le está indicando a npm que debe instalar el paquete
+    de manera Global, esto quiere decir que se va a poder utilizar desde cualquier directorio.
+
+    --> npm install -g [nombreDelPaquete]
+
+    Eliminar paquete local
+
+    --> npm rm [nombreDelPaquete]
+    --> npm uninstall [nombreDelPaquete]
+
+    Eliminar paquete de forma global
+
+    --> npm rm -g [nombreDelPaquete]
+    --> npm uninstall -g [nombreDelPaquete]
+
+    Listar las dependencias de mi proyecto
+
+    --> npm ls
+
+    Consultar las últimas versiones compatibles con las librerías que tienes en tu proyecto
+
+    --> npm outdated
+
+    # Actualizar todas las librerías de tu proyecto que sean compatibles
+
+    --> npm update -save
